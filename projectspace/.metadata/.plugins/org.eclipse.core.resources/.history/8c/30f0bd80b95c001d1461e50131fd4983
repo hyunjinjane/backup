@@ -1,0 +1,46 @@
+package com.shinnaHotel.DAO;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.shinnaHotel.DTO.ReservationDTO;
+import com.shinnaHotel.mybatis.SqlMapConfig;
+
+public class ReservationDAO {
+
+	
+	SqlSessionFactory factory = SqlMapConfig.getFactory();
+	SqlSession sqlSession;
+	
+	public ReservationDAO() {
+		sqlSession = factory.openSession(true);
+	}
+	
+//	public List<ReservationDTO> searchRoom(Map<String, Object> param){
+//
+//		List<ReservationDTO> roomArr = new ArrayList<>();
+//		
+//		sqlSession.selectList("Reservation.searchRoom", param);
+//		
+//		
+//		return roomArr;
+//	}
+
+	
+	public boolean checkdate(Date checkin_date, String checkout_date ) {
+		HashMap<String, String> dates = new HashMap<>();
+		dates.put("checkin_date", checkout_date);
+		dates.put("checkin_date", checkout_date);
+		
+		
+		
+		return false;
+		
+	}
+}
